@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math 对象随机数方法   random() 返回一个随机的小数；范围是[0,1);
+        //这个方法里面不跟参数 
+        //代码验证
+        console.log(Math.random());
+        //如果想得到 两个数之间的随机整数 且包含这2 个整数 则
+        //公式 Math.floor(Math.random()*(max-min+1))+min;
+        function fn1 (min,max){
+            return  Math.floor(Math.random()*(max-min+1))+min
+        };
+        console.log(fn1(1,10));
+
+        //随机点名 
+        var arr = ['张三','李四','赵五','王思思','七十多','sdfsf','sdfsf'];
+        console.log(arr[fn1(0,arr.length-1)]);
+
+        
+    </script>
+</body>
+</html>

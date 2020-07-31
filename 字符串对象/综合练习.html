@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //给定一个字符串： 'abaasdjjjgggghhjjkkkkddddsssss344434343' , 问题如下
+        // 1.字符串的长度
+        // 2.取出指定位置的字符串，如： 0，3，5，9等
+        // 3.查找指定字符是否在以上字符串中存在，如： i,c,b等
+        // 4.替换指定的字符， 如将g替换为22，ss替换为b等
+        // 5.截取指定开始位置到结束的字符串，如取得 1-5的字符串
+        // 6.找出以上字符串中出现次数最多的字符和出现的次数
+
+        var str = 'abaasdjjjgggghhjjkkkkddddsssss344434343';
+        console.log(str.length); // 字符串的长度;   1.
+
+        console.log(str.charAt(0));
+        console.log(str.charAt(3));//取出指定位置的字符串   2.
+
+        console.log(str.indexOf('i'));// -1 表示不存在      3.
+
+        console.log(str.replace('gggg','22')); // 替换指定的字符    4.
+
+        console.log(str.slice(1,5)); // 截取指定的字符串    5.
+
+        var obj = {};
+        for (let i =0; i < str.length ; i++){       // 遍历字符串 取出所有的元素 放入一个空的对象里  如果 对象中没有这个属性 就 设置 值为1  如果有 就+1 ； 
+            var temp = str.charAt(i);
+            if (obj[temp]){
+                obj[temp]++;
+            }
+            else {
+                obj[temp] = 1;
+            }
+        }
+        var ch = 0;
+        var max = 0;
+        for (var k in obj){             //遍历对象 ， 将所有属性的值进行比对 获得最大值 for..in 再将最大值对应的属性名 赋值给ch；
+
+            if(obj[k]>max){
+                max = obj[k];
+                ch = k;
+            }
+        }
+        console.log(max);       
+        console.log(ch);           // 6.
+    </script>
+</body>
+</html>

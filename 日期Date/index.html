@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Date() 日期对象   是一个构造函数  必须使用new来创建我们的日期对象；
+        //例如之前学过的 创建 数组 和 对象；
+        var arr = new Array();
+        var obj = new Object();
+        //1. 使用Date   如果没有参数 返回当前系统的当前时间
+        var date = new Date();
+        console.log(date);
+        //2.参数的写法  数字型  2020，07,31 或者是字符型‘2020-07-31 8:8:8’
+
+        var date1 = new Date(2020,07,31);// 返回的是八月 不是七月 
+        console.log(date1);
+        var date2 = new Date('2020-07-31 8:8:8');
+        console.log(date2);
+    </script>
+</body>
+</html>

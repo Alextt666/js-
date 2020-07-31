@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //格式化日期    年月日
+        var date = new Date();
+        console.log(date.getFullYear());
+        console.log(date.getMonth()+1); // 返回的是当前月份减 一  因为是从0开始计数   即 0-11；所以要加1
+        console.log(date.getDate());//返回几号
+        console.log(date.getDay());//返回周几 周一到周六返回 1-6 但是周日是0；
+        //写一个 2020年 7月 31日 星期五
+        var month = date.getMonth()+1;
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        console.log(date.getFullYear()+'年'+month+'月'+date.getDate()+'日'+arr[date.getDay()]);
+    </script>
+</body>
+</html>

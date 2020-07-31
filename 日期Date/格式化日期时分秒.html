@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //格式化日期    时分秒
+        var date = new Date();
+        console.log(date.getHours());//时
+        console.log(date.getMinutes());//分
+        console.log(date.getSeconds());//秒
+
+        //封装一个函数 返回当前时分秒
+
+        var fn = function (){
+            var time = new Date();
+            hour = time.getHours();
+            hour = hour<10?'0'+hour:hour;
+            min = time.getMinutes();
+            min = min<10?'0'+min : min;
+            sec = time.getSeconds();
+            
+            sec=sec<10?'0'+sec:sec;
+
+            return  '现在是'+hour+'时'+min+'分'+sec+'秒';
+        }
+       console.log(fn());
+    </script>
+</body>
+</html>

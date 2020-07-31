@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //猜数字游戏        随机生成一个1·10之间的数字，并让用户输入一个数字，如果大了 提示大了 如果小了 提示小了 如果对了 提示对了 结束游戏；
+
+
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var num = getRandom(1, 10);
+
+
+
+        while (1) {
+            var userInp = prompt('请输入一个数字')
+
+            if (userInp == num) {
+                alert('答对了！ 真棒');
+                break;
+            }
+            else if (userInp < num) {
+                alert('小了小了');
+            }
+            else if (userInp > num) {
+                alert('大了大了');
+            }
+        }
+
+        // 2.猜数字游戏        随机生成一个1·50之间的数字，并让用户输入一个数字，如果大了 提示大了 如果小了 提示小了 如果对了 提示对了 结束游戏；只有10次机会；
+
+        for (let i = 0; i < 11; i++) {
+            var userInp = prompt('请输入一个数字')
+
+            if(i == 10){
+                alert('没次数啦！');
+                break;
+            }
+            if (userInp == num) {
+                alert('答对了！ 真棒');
+                break;
+            }
+            else if (userInp < num) {
+                alert('小了小了');
+            }
+            else if (userInp > num) {
+                alert('大了大了');
+            }
+        };
+        alert('游戏结束啦！')
+
+    </script>
+</body>
+
+</html>

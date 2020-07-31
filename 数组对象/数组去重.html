@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //给数组去重  [c,a,z,a,x,a,x,c,b]
+        //核心算法是： 遍历旧数组 ，拿着旧数组的数去查询新数组 若新数组中没有 则添加该元素 若 新数组中有 则不添加该元素 输出新数组 
+
+        //怎么知道元素在新数组中是否存在呢？  需要用到新数组.indexOf()方法  若返回 -1 则表示 元素在新数组中不存在
+
+        //可以通过这样的方式 封装一个去重的函数 unique；
+        var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+        function unique(arr) {
+            var newArr = [];
+            for (i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) == -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+
+        console.log(unique(arr));
+    </script>
+</body>
+
+</html>

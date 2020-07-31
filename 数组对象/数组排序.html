@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 翻转数组 
+        var arr = [1,2,3]
+        arr.reverse();
+        console.log(arr);
+        //2. 数组排序(冒泡排序)
+        var arr1 = [41,3,18,76,61]; //如果是个位数 就可以正常输出 如果是多位 数 则 会按照十位的数字相同的放在一起  因此需要改变一下写法 保证正常输出
+        arr1.sort();
+        console.log(arr1);//[18, 3, 41, 61, 76]
+
+        //改写方式如下 
+        var arr2 = [23,26,5,2,67];
+        arr2.sort(function(a,b){
+            return a-b              //a-b 是升序 若是b-a 就是降序
+        });
+        console.log(arr2);//[2, 5, 23, 26, 67]
+
+        arr2.sort(function(a,b){
+            return b-a
+        })
+        console.log(arr2); //[67, 26, 23, 5, 2]
+    </script>
+</body>
+</html>
